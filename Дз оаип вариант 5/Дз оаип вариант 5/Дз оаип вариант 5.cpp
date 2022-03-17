@@ -7,7 +7,7 @@ int main()
     const int size = 20;
     double arr[size];
 
-    int n; 
+    int n,mas; 
     std::cout << " Введите число вещественных чисел n = ";
     std::cin >> n;
 
@@ -23,6 +23,19 @@ int main()
             max = arr[i];
 
     std::cout << " Максимальное значение : " << max << std::endl;
+    int sum = 0;
+    for (int i = max- 1; i > 0; i--)
+    {
+        if (mas[i] > 0)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                sum += mas[j];
+            }
+
+            break;
+        }
+    }
 
     return 0;
 }
